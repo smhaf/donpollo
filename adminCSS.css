@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+}
+
+.food, .order{
+    border-collapse: collapse;
+    border: 1;
+    margin: 0 10px 10px;
+}
+
+table th{
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2{
+    margin-top: 30px;
+    text-align: center;
+    background-color: pink;
+    margin-bottom: 15px;
+    box-shadow: 0px 10px 7px rgb(255, 149, 167);
+}
+
+.fd{
+    margin-top: 10px;
+}
+
+.header{
+    background-color: pink;
+    margin-bottom: 20px;
+}
+
+.food-container input{
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+button{
+    margin: 10px;
+    z-index: 1000;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    color: white;
+    background: rgb(36, 36, 36);
+    transform: scale(1.1);
+}
+
+.order input{
+    margin: 0px 0px 0px 5px;
+    border-radius: 10px;
+    padding: 1px 5px 1px 5px;
+    outline: none;
+}
+
+.sales,.details{
+    border-collapse: collapse;
+    margin: 10px 10px 20px 10px;
+}
+
+body{
+    background: white;
+}
+
+table{
+    background-color: white;
+    text-align: center;
+}
+
+.food-container,.emp-container table, .calc-container table, .ViewOrder table, .assign-container table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details-container table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food-container,.details-container, .emp-container, .calc-container, .ViewOrder, .assign-container{
+    background: white;
+    box-shadow: 10px 10px 7px rgb(36, 36, 36);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 3px solid black;
+}
+
+.emp-container table{
+    margin-top: 10px;
+}
+
+.emp-detail h2{
+    background-color: pink;
+    box-shadow: 0px 10px 7px rgb(255, 149, 167);
+}
