@@ -23,7 +23,7 @@
                     <label><input type="radio" name="privilege" value="customer" checked>Customer</label>
                 </div>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" name="username" required><i class='bx bx-user'></i>
+                    <input type="text" placeholder="Email" name="username" required><i class='bx bx-user'></i>
                 </div>
                 <div class="input-box">
                     <input type="password" placeholder="Password" name="password" required><i class='bx bx-lock-alt'></i>
