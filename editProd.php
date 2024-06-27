@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
     
     if($_SESSION['privilege'] != "admin"){/*make sure no unauthorized user access this page*/
@@ -12,18 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Food</title>
-    <!-- <link rel="stylesheet" href="editFoodCSS.css"> -->
+    <title>Edit Product</title>
     <style>
         <?php include('editFoodCSS.css') ?>
     </style>
 </head>
 <body>
-    <h1>Update Food</h1>
-    <form action="upDelFood.php" method="post">
+    <h1>Update Product</h1>
+    <form action="upDelProd.php" method="post">
         <?php
-            $food_id = $_REQUEST['f_id'];
-            $sql = "SELECT * FROM food WHERE food_id= '$food_id';";
+            $prod_id = $_REQUEST['p_id'];
+            $sql = "SELECT * FROM product WHERE prod_id= '$prod_id';";
             $query = mysqli_query($dbconn, $sql) or die ("Error: " . mysqli_error($dbconn));
             $row = mysqli_num_rows($query);
         
@@ -32,40 +31,40 @@
             }
             else{
                 $r = mysqli_fetch_assoc($query);
-                $food_name = $r['food_name'];
-                $food_desc = $r['food_desc'];
-                $food_price = $r['food_price'];
-                $food_type = $r['food_type'];
+                $prod_name = $r['prod_name'];
+                $prod_desc = $r['prod_desc'];
+                $prod_price = $r['prod_price'];
+                $prod_type = $r['prod_type'];
                 $picture = $r['picture'];
             }
 
-            $_SESSION['f_id'] = $food_id;
+            $_SESSION['p_id'] = $prod_id;
         ?>
         <table>
             <tr>
-                <td>food_id</td>
+                <td>prod_id</td>
                 <td>:</td>
-                <td><?php echo $food_id; ?></td>
+                <td><?php echo $prod_id; ?></td>
             </tr>
             <tr>
-                <td>food_name</td>
+                <td>prod_name</td>
                 <td>:</td>
-                <td><input type="text" name="f_name" value="<?php echo $food_name; ?>"></td>
+                <td><input type="text" name="p_name" value="<?php echo $prod_name; ?>"></td>
             </tr>
             <tr>
-                <td>food_desc</td>
+                <td>prod_desc</td>
                 <td>:</td>
-                <td><input type="text" name="f_desc" value="<?php echo $food_desc; ?>"></td>
+                <td><input type="text" name="p_desc" value="<?php echo $prod_desc; ?>"></td>
             </tr>
             <tr>
-                <td>food_price</td>
+                <td>prod_price</td>
                 <td>:</td>
-                <td><input type="text" name="f_price" value="<?php echo $food_price; ?>"></td>
+                <td><input type="text" name="p_price" value="<?php echo $prod_price; ?>"></td>
             </tr>
             <tr>
-                <td>food_type</td>
+                <td>prod_type</td>
                 <td>:</td>
-                <td><input type="text" name="f_type" value="<?php echo $food_type; ?>"></td>
+                <td><input type="text" name="p_type" value="<?php echo $prod_type; ?>"></td>
             </tr>
             <tr>
                 <td>picture</td>

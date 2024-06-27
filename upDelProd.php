@@ -1,27 +1,27 @@
 <?php
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         if(isset($_POST['update'])){
-            $food_id = $_SESSION['f_id'];
-            $food_name = htmlspecialchars($_POST['f_name']);
-            $food_desc = htmlspecialchars($_POST['f_desc']);
-            $food_price = htmlspecialchars($_POST['f_price']);
-            $food_type = htmlspecialchars($_POST['f_type']);
+            $prod_id = $_SESSION['p_id'];
+            $prod_name = htmlspecialchars($_POST['p_name']);
+            $prod_desc = htmlspecialchars($_POST['p_desc']);
+            $prod_price = htmlspecialchars($_POST['p_price']);
+            $prod_type = htmlspecialchars($_POST['p_type']);
             $picture = htmlspecialchars($_POST['pic']);
 
-            $sql = "update food set food_name = '$food_name', food_desc = '$food_desc',
-                    food_price = '$food_price', food_type = '$food_type', picture = '$picture'
-                    where food_id = '$food_id'";
+            $sql = "update product set prod_name = '$prod_name', prod_desc = '$prod_desc',
+                    prod_price = '$prod_price', prod_type = '$prod_type', picture = '$picture'
+                    where prod_id = '$prod_id'";
             $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
             die("<script>alert('Update successfully')
             ;window.location.href='admin.php';</script>");
         }
         elseif(isset($_POST['delete'])){
-            $food_id = $_SESSION['f_id'];
+            $prod_id = $_SESSION['f_id'];
 
-            $sql = "delete from food where food_id = '$food_id'";
+            $sql = "delete from product where prod_id = '$prod_id'";
             $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
             die("<script>alert('Delete successfully')
             ;window.location.href='admin.php';</script>");

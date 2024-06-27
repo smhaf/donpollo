@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
 ?>
 <html lang="en">
@@ -16,32 +16,32 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <form action="addFoodProcess.php" method="post">
+            <form action="addProdProcess.php" method="post">
                 <table>
                     <tr>
-                        <td>food_id</td>
+                        <td>prod_id</td>
                         <td>:</td>
-                        <td><input type="text" name="f_id" required></td>
+                        <td><input type="text" name="p_id" required></td>
                     </tr>
                     <tr>
-                        <td>food_name</td>
+                        <td>prod_name</td>
                         <td>:</td>
-                        <td><input type="text" name="f_name" required></td>
+                        <td><input type="text" name="p_name" required></td>
                     </tr>
                     <tr>
-                        <td>food_desc</td>
+                        <td>prod_desc</td>
                         <td>:</td>
-                        <td><input type="text" name="f_desc" required></td>
+                        <td><input type="text" name="p_desc" required></td>
                     </tr>
                     <tr>
-                        <td>food_price</td>
+                        <td>prod_price</td>
                         <td>:</td>
-                        <td><input type="text" name="f_price" required></td>
+                        <td><input type="text" name="p_price" required></td>
                     </tr>
                     <tr>
-                        <td>food_type</td>
+                        <td>prod_type</td>
                         <td>:</td>
-                        <td><input type="text" name="f_type" required></td>
+                        <td><input type="text" name="p_type" required></td>
                     </tr>
                     <tr>
                         <td>picture</td>
