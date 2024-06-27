@@ -31,8 +31,12 @@ function confirmation() {
          include('logout.css');?>
     </style>
 </head>
+<header>
+    <div class="headcont">
+    <h1>Welcome, this is the Employee Page</h1>
+    </div>
+</header>
 <body>
-    <h1>Welcome, this is the Employee Page<br><button class="btnLogOut" onClick='confirmation()'>Log Out</button></h1>
     <div class="order-stat">
         <h2>Order Status</h2>
         <div class="status">
@@ -171,6 +175,9 @@ function confirmation() {
         </div>
     </div>
 	-->
+    <div class="logbtn">
+        <button class="btnLogOut" onClick='confirmation()'>Log Out</button>
+    </div>
 </body>
 <?php
     mysqli_close($dbconn);
