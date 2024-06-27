@@ -27,8 +27,8 @@ function confirmation() {
     <header>
         <div class="container">
             <div class="left-section">
-                <img src="pics/logobaka.jpg" alt="Logo" class="logo">
-                <h1 class=custfont id=tagline > "One smell hold thousand memories"</h1>
+                <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
+                <h1 class=custfont id=tagline > DonPollo</h1>
             </div>
             <nav>
                 <a href="custOrder.php">Your Order</a>
