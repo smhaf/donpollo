@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    include("bakadbconn.php");
+    include("dbconn.php");
 
-    $f_id = $_REQUEST['f_id'];
+    $f_id = $_REQUEST['p_id'];
 
-    $sql = "select * from food where food_id = '$f_id'";
+    $sql = "select * from product where prod_id = '$f_id'";
     $query = mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
     $row = mysqli_fetch_assoc($query);
 
-    $food_id = $row['food_id'];
-    $food_name = $row['food_name'];
-    $food_desc = $row['food_desc'];
-    $food_price = $row['food_price'];
-    $food_type = $row['food_type'];
+    $food_id = $row['prod_id'];
+    $food_name = $row['prod_name'];
+    $food_desc = $row['prod_desc'];
+    $food_price = $row['prod_price'];
+    $food_type = $row['prod_type'];
     $picture = $row['picture'];
 ?>
 <html lang="en">

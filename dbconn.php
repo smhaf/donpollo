@@ -3,7 +3,7 @@
 $user = "root"; //mysql username
 $pass = ""; //mysql password
 $host = "localhost"; //server name or ip address
-$dbname = "bakerydb"; //your db name
+$dbname = "donpollodb"; //your db name
 //$dbconn = mysql_connect($host, $user, $pass);
 $dbconn = mysqli_connect($host, $user, $pass, $dbname);
 

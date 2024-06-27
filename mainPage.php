@@ -1,5 +1,5 @@
 <?php
-    include ('bakadbconn.php');
+    include ('dbconn.php');
     session_start();
 ?>
 <script>
@@ -52,29 +52,29 @@ function confirmation() {
                     <div class="product-grid" id="product-grid">
 
                         <?php 
-                            $sql = "SELECT * FROM food;";
+                            $sql = "SELECT * FROM product;";
                             $result = mysqli_query($dbconn, $sql);
 
                             if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_assoc($result)) {
-                                    $food_name = $row['food_name'];
-                                    $food_desc = $row['food_desc'];
-                                    $food_price = $row['food_price'];
+                                    $food_name = $row['prod_name'];
+                                    $food_desc = $row['prod_desc'];
+                                    $food_price = $row['prod_price'];
                                     $food_picture = $row['picture'];
-                                    $food_id = $row['food_id'];
+                                    $food_id = $row['prod_id'];
 
-                                    echo "<a href='product1.php?f_id=$food_id' class='product'>
+                                    echo "<a href='product1.php?p_id=$food_id' class='product'>
                                              <div class='product-content'>
                                                 <img src='$food_picture' alt='$food_name'>
                                                 <h3 >$food_name</h3>
                                                 <p>RM $food_price</p>
                                              </div>
                                           </a>";
-                }
-            }
-        ?>
-    </div>
-</div>
+                                    }
+                                }
+                     ?>
+                    </div>
+                </div>
 
                 </div>
             </section>
@@ -105,17 +105,17 @@ function confirmation() {
                 <h2 class=customfont id="ice-cream">Ice Creams</h2>
                 <div class="iceCream-container" >
                     <?php
-                        $sql_ice = "SELECT * FROM food WHERE food_type='dessert';";
+                        $sql_ice = "SELECT * FROM product WHERE prod_type='polo t-shirt';";
                         $result = mysqli_query($dbconn,$sql_ice);
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['food_name'];
-                                $food_desc = $row['food_desc'];
-                                $food_price = $row['food_price'];
+                                $food_name = $row['prod_name'];
+                                $food_desc = $row['prod_desc'];
+                                $food_price = $row['prod_price'];
                                 $food_picture = $row['picture'];
 
-                                echo "<a href=product1.php?f_id=".$row['food_id']." class= 'producti'>
+                                echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'producti'>
                                 <div class='product'>
                                     <img src='$food_picture' alt='$food_name'>
                                     <h3>$food_name</h3>
@@ -133,17 +133,17 @@ function confirmation() {
                 <h2 class=customfont id="cake">Cakes</h2>
                 <div class="cake-container" >
                     <?php
-                        $sql_cake = "SELECT * FROM food WHERE food_type='cake';";
+                        $sql_cake = "SELECT * FROM product WHERE prod_type='sweatshirt';";
                         $result = mysqli_query($dbconn,$sql_cake);
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['food_name'];
-                                $food_desc = $row['food_desc'];
-                                $food_price = $row['food_price'];
+                                $food_name = $row['prod_name'];
+                                $food_desc = $row['prod_desc'];
+                                $food_price = $row['prod_price'];
                                 $food_picture = $row['picture'];
 
-                                echo "<a href=product1.php?f_id=".$row['food_id']." class= 'producti'>
+                                echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'producti'>
                                 <div class='product'>
                                     <img src='$food_picture' alt='$food_name'>
                                     <h3>$food_name</h3>
@@ -160,17 +160,17 @@ function confirmation() {
                 <h2 class=customfont id="cookie">Cookies</h2>
                 <div class="cookie-container" >
                     <?php
-                        $sql_cookie = "SELECT * FROM food WHERE food_type='cookies';";
+                        $sql_cookie = "SELECT * FROM product WHERE prod_type='pants';";
                         $result = mysqli_query($dbconn,$sql_cookie);
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['food_name'];
-                                $food_desc = $row['food_desc'];
-                                $food_price = $row['food_price'];
+                                $food_name = $row['prod_name'];
+                                $food_desc = $row['prod_desc'];
+                                $food_price = $row['prod_price'];
                                 $food_picture = $row['picture'];
 
-                                echo "<a href=product1.php?f_id=".$row['food_id']." class= 'productk'>
+                                echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'productk'>
                                 <div class='product'>
                                     <img src='$food_picture' alt='$food_name'>
                                     <h3>$food_name</h3>

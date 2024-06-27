@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("bakadbconn.php");
+    include("dbconn.php");
     
     /*check if user submit form */
     if($_SERVER['REQUEST_METHOD'] == "POST"){

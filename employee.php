@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
     
     if($_SESSION['privilege'] != "employee"){/*make sure no unauthorized user access this page*/
