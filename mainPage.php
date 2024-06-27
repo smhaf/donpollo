@@ -166,7 +166,7 @@ function confirmation() {
                 <h2 class=customfont id="cookie">T-Shirts</h2>
                 <div class="cookie-container" >
                     <?php
-                        $sql_cookie = "SELECT * FROM product WHERE prod_type='pants';";
+                        $sql_cookie = "SELECT * FROM product WHERE prod_type='t-shirt';";
                         $result = mysqli_query($dbconn,$sql_cookie);
 
                         if (mysqli_num_rows($result) > 0) {
