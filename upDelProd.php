@@ -19,7 +19,7 @@
             ;window.location.href='admin.php';</script>");
         }
         elseif(isset($_POST['delete'])){
-            $prod_id = $_SESSION['f_id'];
+            $prod_id = $_SESSION['p_id'];
 
             $sql = "delete from product where prod_id = '$prod_id'";
             $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));

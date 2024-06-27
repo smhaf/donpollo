@@ -47,9 +47,12 @@
                     <!--sini pun (desc)-->
                     <p>Description:</p>
                     <input type="hidden" name="foodDesc" id="foodDesc" value="<?php echo $food_desc; ?>">
-                    <label for="foodDesc" class="foodDesc"><?php echo $food_desc; ?></label><br>
+                    <label for="foodDesc" class="foodDesc"><?php echo $food_desc; ?></label><br><br>
+                    
                     <label for="quantity">Product Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" required>
+                    <input type="number" id="quantity" name="quantity" min="1" required><br>
+                    <label for="size">Size:</label>
+                    <input  id="size" name="size" required>
                 </form>
                 <div class="center"><a href="mainPage.php"><button class="buyMe" type="submit" form="prod1" name="foodID" value="<?php echo $food_id; ?>">Buy Now</button></a></div>
             </div>
@@ -57,7 +60,7 @@
     </main>
     <footer>
         <div class="foot-container">
-            <p>&copy; 2024 Baka Bakery. All rights reserved.</p>
+            <p>&copy; 2024 Donpollo. All rights reserved.</p>
         </div>
     </footer>
 </body>
