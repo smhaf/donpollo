@@ -10,8 +10,7 @@
 .header{
     background: beige;
     text-align: center;
-    background: pink;
-    box-shadow: 0px 10px 7px rgb(255, 149, 167);
+    background-image: url(pics/backgroundhome.jpg);
     padding-top: 7px;
     padding-bottom: 7px;
 }
@@ -59,7 +58,8 @@ img{
     width: 50px;
     text-align: center;
     border-radius: 25px;
-    text-decoration: none;
-    color: black;
-    background: pink;
+   
+   
+    background: #E5E4E2;
+    
 }
