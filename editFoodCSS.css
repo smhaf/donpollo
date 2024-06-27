@@ -83,3 +83,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.updel {
+    margin: auto;
+}

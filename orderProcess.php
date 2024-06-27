@@ -13,6 +13,7 @@
         $cust_id = $_SESSION['cust_id'];
         $food_id = htmlspecialchars($_POST['foodID']);
         $qty = htmlspecialchars($_POST['quantity']);
+        $size = htmlspecialchars($_POST['size']);
         $ord_status = "Pending";
 
         do{/*generate ord_id */

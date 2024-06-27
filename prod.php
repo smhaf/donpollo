@@ -47,17 +47,17 @@
                     echo "<td>". $row['prod_price'] ."</td>";
                     echo "<td>". $row['prod_type'] ."</td>";
                     echo "<td>". $row['picture'] ."</td>";
-                    echo "<td><a href='editProd.php?p_id=".$row["prod_id"]."'>Edit</a></td>";
+                    echo "<td><a href='editProd.php?p_id=".$row["prod_id"]."' style='color: blue; text-decoration: underline;'>Edit</a></td>";
                     echo "<tr>";
                 }
             ?>
         </table>
     </div>
     <div class="addfud">
-        <a href='addProd.php'><button>add new Product</button></a><br>
+        <a href='addProd.php'><button>Add New Product</button></a><br>
     </div>
     <div class="back">
-        <a href='admin.php'><button>cancel</button></a><br>
+        <a href='admin.php'><button>Cancel</button></a><br>
     </div>  
 </body>
 <?php

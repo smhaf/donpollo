@@ -30,10 +30,9 @@ table th{
 
 .header{
     text-align: center;
-    background: pink;
+    background-image: url(pics/testbg.jpg);
     padding-bottom: 20px;
     padding-top: 20px;
-    box-shadow: 0px 10px 7px rgb(255, 149, 167);
 }
 
 body{
