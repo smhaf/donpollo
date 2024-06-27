@@ -28,7 +28,7 @@ function confirmation() {
         <div class="container">
             <div class="left-section">
                 <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
-                <h1 class=custfont id=tagline > DonPollo</h1>
+                <h1 class=custfont id=tagline > DonPollo Enterprise.</h1>
             </div>
             <nav>
                 <a href="custOrder.php">Your Order</a>
