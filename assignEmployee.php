@@ -10,7 +10,7 @@
         $ord_id = htmlspecialchars($_POST['ord_id']);
         $emp_id = htmlspecialchars($_POST['emp_id']);
         /*Check the existing employee id and order id*/
-        $sql = "Select * from food_order where ord_id = '$ord_id'";
+        $sql = "Select * from prod_order where ord_id = '$ord_id'";
         $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
         $row = mysqli_num_rows($query);
         if($ord_id == 0){
@@ -25,7 +25,7 @@
             ;window.location.href='admin.php';</script>");
         }
         /*assign the employee to order*/
-        $sql = "update food_order set emp_id = '$emp_id' where ord_id = '$ord_id';";
+        $sql = "update prod_order set emp_id = '$emp_id' where ord_id = '$ord_id';";
         $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
         die("<script>alert('Employee is succesfully assigned')
             ;window.location.href='admin.php';</script>");
