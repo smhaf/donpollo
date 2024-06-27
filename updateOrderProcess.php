@@ -5,7 +5,7 @@
         $ord_id = $_SESSION['o_code'];
         $ord_status = $_POST['ord_status'];
 
-        $sql = "update food_order
+        $sql = "update prod_order
                 set ord_status = '". $ord_status ."'
                 where ord_id = '". $ord_id ."';";
         mysqli_query($dbconn, $sql) or die ("Error: " . mysqli_error($dbconn));
