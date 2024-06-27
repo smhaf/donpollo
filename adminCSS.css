@@ -26,6 +26,11 @@ table th{
 h1{
     text-align: center;
     margin-bottom: 0;
+    background-color: #808080;
+    margin-bottom: 15px;
+    padding: 25px;
+    background-image: url(pics/backgroundhome.jpg);
+
 }
 
 h2{
@@ -117,4 +122,11 @@ table{
 .emp-detail h2{
     background-color: pink;
     box-shadow: 0px 10px 7px rgb(255, 149, 167);
+}
+
+.logbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* Optional: This centers the button vertically within the viewport */
 }
