@@ -58,7 +58,7 @@ function confirmation() {
                     <!--Untuk update, refer sini: https://docs.google.com/presentation/d/1HNhDIzOMOvb3IPY9SVcXha6MLLyjXydp/edit?usp=sharing&ouid=115591133717528043506&rtpof=true&sd=true-->
                     <th>Update</th>
                     <?php
-                    $sql = "select * from food_order where ord_status = 'Pending' and emp_id = '$employee' ;";
+                    $sql = "select * from prod_order where ord_status = 'Pending' and emp_id = '$employee' ;";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
 
@@ -66,7 +66,7 @@ function confirmation() {
                         echo "<tr>";
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
-                        echo "<td>". $row['food_id'] ."</td>";
+                        echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
@@ -89,7 +89,7 @@ function confirmation() {
                     <td>Status</td>
                     <th>Update</th>
                     <?php
-                    $sql = "select * from food_order where ord_status = 'Complete' and emp_id = '$employee';";
+                    $sql = "select * from prod_order where ord_status = 'Complete' and emp_id = '$employee';";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
 
@@ -97,7 +97,7 @@ function confirmation() {
                         echo "<tr>";
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
-                        echo "<td>". $row['food_id'] ."</td>";
+                        echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
@@ -120,7 +120,7 @@ function confirmation() {
                     <td>Status</td>
                     <th>Update</th>
                     <?php
-                    $sql = "select * from food_order where ord_status = 'Cancelled' and emp_id = '$employee';";
+                    $sql = "select * from prod_order where ord_status = 'Cancelled' and emp_id = '$employee';";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
 
@@ -128,7 +128,7 @@ function confirmation() {
                         echo "<tr>";
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
-                        echo "<td>". $row['food_id'] ."</td>";
+                        echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    include("bakadbconn.php");
+    include("dbconn.php");
 
     if($_SESSION['privilege'] != "customer"){/*make sure no unauthorized user access this page*/
         die("<script>alert('You have not login yet. Lets do that now!!')

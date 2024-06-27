@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    include("bakadbconn.php");
+    include("dbconn.php");
 
     if($_SESSION['privilege'] != "customer"){/*make sure user is sign in*/
         die("<script>alert('You have not login yet. Lets do that now!!')
             ;window.location.href='login.php';</script>");
     }
     $ord_id = htmlspecialchars($_GET['o_id']);
-    $sql = "select o.food_id, f.food_name, o.qty, f.food_price, (o.qty * f.food_price) as total 
-            from food_order o join food f on o.food_id = f.food_id
+    $sql = "select o.prod_id, p.prod_name, o.qty, p.prod_price, (o.qty * p.prod_price) as total 
+            from prod_order o join product p on o.prod_id = p.prod_id
             where o.ord_id = '$ord_id';";
     $query = mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
     $row = mysqli_fetch_assoc($query);
-    $food_id = $row['food_id'];
-    $food_name = $row['food_name'];
+    $food_id = $row['prod_id'];
+    $food_name = $row['prod_name'];
     $qty = $row['qty'];
-    $food_price = $row['food_price'];
+    $food_price = $row['prod_price'];
     $total = $row['total'];
 
 ?>
