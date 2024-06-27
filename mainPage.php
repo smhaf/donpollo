@@ -99,12 +99,6 @@ function confirmation() {
                         <h3>T-shirts</h3>
                         </a>
                     </div>
-                    <div class="category" class="scroll-link">
-                        <a href="#cookie">
-                        <img src="https://i.ibb.co/XVmgjxR/goods-462197-sub13.jpg" alt="cookie" border="0">
-                        <h3>Pants</h3>
-                        </a>
-                    </div>
                 </div>
             </section>
             <section class="ice-cream">
