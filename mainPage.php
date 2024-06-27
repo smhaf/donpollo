@@ -28,7 +28,7 @@ function confirmation() {
         <div class="container">
             <div class="left-section">
                 <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
-                <h1 class=custfont id=tagline > DonPollo</h1>
+                <h1 class=custfont id=tagline > DonPollo Enterprise.</h1>
             </div>
             <nav>
                 <a href="custOrder.php">Your Order</a>
@@ -99,12 +99,6 @@ function confirmation() {
                         <h3>T-shirts</h3>
                         </a>
                     </div>
-                    <div class="category" class="scroll-link">
-                        <a href="#cookie">
-                        <img src="https://i.ibb.co/XVmgjxR/goods-462197-sub13.jpg" alt="cookie" border="0">
-                        <h3>Pants</h3>
-                        </a>
-                    </div>
                 </div>
             </section>
             <section class="ice-cream">
@@ -166,7 +160,7 @@ function confirmation() {
                 <h2 class=customfont id="cookie">T-Shirts</h2>
                 <div class="cookie-container" >
                     <?php
-                        $sql_cookie = "SELECT * FROM product WHERE prod_type='pants';";
+                        $sql_cookie = "SELECT * FROM product WHERE prod_type='t-shirt';";
                         $result = mysqli_query($dbconn,$sql_cookie);
 
                         if (mysqli_num_rows($result) > 0) {
