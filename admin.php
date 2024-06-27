@@ -69,7 +69,7 @@ function confirmation() {
                 } 
             ?>
             <div class="btn">
-                <button type="submit" value="foods">Update Food</button>
+                <button type="submit" value="foods">Update Product</button>
             </div>
         </form>
     </div>

@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="header">
-        <h1><?php echo "Hi ". $_SESSION['cust_name']."" ?></h1>
+        <h1><?php echo "Hi ". $_SESSION['cust_name']."!" ?></h1>
         <h2>This is your order</h2>
     </div>
     

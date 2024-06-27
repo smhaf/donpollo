@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-<h2>Status detail</h2> <!-- ++++++++++++++++++++++++ FOOD DETAILS ++++++++++++++++++++++++++++ -->
+<h2>Status detail</h2> <!-- ++++++++++++++++++++++++ Product DETAILS ++++++++++++++++++++++++++++ -->
     <div class="container">
         <div>
             <form action="updateOrderProcess.php" method="post">
