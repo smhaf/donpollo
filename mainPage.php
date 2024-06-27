@@ -186,7 +186,7 @@ function confirmation() {
         </main>
         <footer>
             <div class="footer-container">
-                <p>&copy; 2024 Baka Bakery. All rights reserved.</p>
+                <p>&copy; 2024 Donpollo . All rights reserved.</p>
             </div>
         </footer>
 

@@ -9,13 +9,13 @@
         header, footer {
             background-color: #B2BEB5;
             color: black;
-            padding: 25px 0;
+            padding: 35px 0;
             text-align: center;
         }
 
         header{
             margin-bottom: 10px;
-            background-image: url('pics/trytry.jpg'); 
+            background-image: url('pics/abuja.jpg'); 
             background-size: cover;
             background-position: center;
             
@@ -23,7 +23,7 @@
         footer{
             margin-top: 20px;
             margin-bottom: 10px;
-            background-image: url('pics2/footprod.jpg'); 
+            background-image: url('pics/abuja.jpg'); 
             background-size: cover;
             background-position: center;
         }
