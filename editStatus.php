@@ -26,7 +26,7 @@
             <form action="updateOrderProcess.php" method="post">
             <?php
                 $ord_code = $_REQUEST['o_code'];
-                $sql = "SELECT * from food_order where ord_id = '$ord_code';";
+                $sql = "SELECT * from prod_order where ord_id = '$ord_code';";
                 $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                 $row = mysqli_fetch_assoc($query);
             
