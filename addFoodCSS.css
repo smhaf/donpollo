@@ -15,7 +15,7 @@ table{
 .container{
     display: flex;
     flex-direction: column;
-    background: pink;
+    background: rgb(141, 141, 141);
     min-height: 100vh;
 }
 
