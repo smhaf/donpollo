@@ -13,6 +13,7 @@
         $cust_id = $_SESSION['cust_id'];
         $food_id = htmlspecialchars($_POST['foodID']);
         $qty = htmlspecialchars($_POST['quantity']);
+        $size = htmlspecialchars($_POST['size']);
         $ord_status = "Pending";
 
         do{/*generate ord_id */
@@ -32,7 +33,7 @@
 
         //insert order into database
         $sql = "insert into prod_order (ord_id, cust_id, prod_id, qty, ord_status)
-                values ('$ord_id', '$cust_id', '$food_id', '$qty', '$ord_status');";
+                values ('$ord_id', '$cust_id', '$food_id', '$qty', '$ord_status','$size');";
         mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
         ?>
         <script>alert('Your order has been made. Now proceed with payment.');</script>
