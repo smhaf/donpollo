@@ -1,5 +1,5 @@
 <?php
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
 ?>
 
@@ -12,7 +12,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $ord_id = $_GET['o_id'];
-        $sql = "Update food_order set ord_status = 'Cancelled' where ord_id = '$ord_id'";
+        $sql = "Update prod_order set ord_status = 'Cancelled' where ord_id = '$ord_id'";
         $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
 
         $sql = "delete from receipt where ord_id = '$ord_id'";

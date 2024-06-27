@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("bakadbconn.php");
+    include("dbconn.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         /*capture data from post and sesstion */

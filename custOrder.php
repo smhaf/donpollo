@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include("bakadbconn.php");
+    include("dbconn.php");
     session_start();
     
     if($_SESSION['privilege'] != "customer"){/*make sure no unauthorized user access this page*/
@@ -33,17 +33,17 @@
                 <th>Order Status</th>
                 <th>Option</th>
                     <?php
-                    $sql = "SELECT food_order.*, food.picture 
-                    FROM food_order 
-                    JOIN food ON food_order.food_id = food.food_id 
-                    WHERE food_order.cust_id = '".$_SESSION['cust_id']."' ";
+                    $sql = "SELECT prod_order.*, product.picture 
+                    FROM prod_order 
+                    JOIN product ON prod_order.prod_id = product.prod_id 
+                    WHERE prod_order.cust_id = '".$_SESSION['cust_id']."' ";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
                     while($row = mysqli_fetch_array($query)){
                         echo "<tr>";
                         echo "<td align='center'><img src='" . $row['picture'] . "' alt='Food Picture' /></td>";
                         echo "<td>". $row['ord_id'] ."</td>";
-                        echo "<td>". $row['food_id'] ."</td>";
+                        echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
                         if($row['ord_status'] == 'Pending'||$row['ord_status'] == 'pending'){
