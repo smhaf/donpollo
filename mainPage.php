@@ -27,8 +27,8 @@ function confirmation() {
     <header>
         <div class="container">
             <div class="left-section">
-                <img src="pics/logobaka.jpg" alt="Logo" class="logo">
-                <h1 class=custfont id=tagline > "One smell hold thousand memories"</h1>
+                <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
+                <h1 class=custfont id=tagline > DonPollo</h1>
             </div>
             <nav>
                 <a href="custOrder.php">Your Order</a>
@@ -83,26 +83,32 @@ function confirmation() {
                 <div class="category-grid">
                     <div class="category">
                         <a href="#ice-cream" class="scroll-link">
-                        <img src="https://i.ibb.co/CBfJsgp/ice-cream.jpg" alt="ice-cream" border="0">
-                        <h3>Ice creams</h3>
+                        <img src="https://i.ibb.co/hcRKJwk/goods-467039-sub12.jpg" alt="ice-cream" border="0">
+                        <h3>Polo T-shirts</h3>
                         </a>
                     </div>
                     <div class="category" class="scroll-link">
                         <a href="#cake">
-                        <img src="https://i.ibb.co/FnHfyFs/cake.jpg" alt="cake" border="0">
-                        <h3>Cakes</h3>
+                        <img src="https://i.ibb.co/1znwfJS/goods-462199-sub13.jpg" alt="cake" border="0">
+                        <h3>Sweatshirts</h3>
                         </a>
                     </div>
                     <div class="category" class="scroll-link">
                         <a href="#cookie">
-                        <img src="https://i.ibb.co/PrFFwjQ/cookie.jpg" alt="cookie" border="0">
-                        <h3>Cookies</h3>
+                        <img src="https://i.ibb.co/z7LfZt0/goods-465185-sub12.jpg" alt="cookie" border="0">
+                        <h3>T-shirts</h3>
+                        </a>
+                    </div>
+                    <div class="category" class="scroll-link">
+                        <a href="#cookie">
+                        <img src="https://i.ibb.co/XVmgjxR/goods-462197-sub13.jpg" alt="cookie" border="0">
+                        <h3>Pants</h3>
                         </a>
                     </div>
                 </div>
             </section>
             <section class="ice-cream">
-                <h2 class=customfont id="ice-cream">Ice Creams</h2>
+                <h2 class=customfont id="ice-cream">Polo T-Shirts</h2>
                 <div class="iceCream-container" >
                     <?php
                         $sql_ice = "SELECT * FROM product WHERE prod_type='polo t-shirt';";
@@ -130,7 +136,7 @@ function confirmation() {
                 </div>
             </section>
             <section class="cake">
-                <h2 class=customfont id="cake">Cakes</h2>
+                <h2 class=customfont id="cake">Sweatshirts</h2>
                 <div class="cake-container" >
                     <?php
                         $sql_cake = "SELECT * FROM product WHERE prod_type='sweatshirt';";
@@ -157,7 +163,7 @@ function confirmation() {
                 </div>
             </section>
             <section class="cookie">
-                <h2 class=customfont id="cookie">Cookies</h2>
+                <h2 class=customfont id="cookie">T-Shirts</h2>
                 <div class="cookie-container" >
                     <?php
                         $sql_cookie = "SELECT * FROM product WHERE prod_type='pants';";

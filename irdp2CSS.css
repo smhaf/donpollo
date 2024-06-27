@@ -7,7 +7,7 @@
             box-sizing: border-box;
         }
         header {
-            background-image: url('pics/pinkhead.jpg');
+            background-image: url('pics/backgroundhome.jpg');
             background-size: cover;
             background-color: #e9bcf1;
             background-position: center;
@@ -22,7 +22,7 @@
         }
         
         footer {
-            background-image: url('pics/pinkfoot.jpg');
+            background-image: url('pics/backgroundfooter.avif');
             background-size: cover;
             background-position: center;
             background-color: #e9bcf1;
@@ -38,9 +38,10 @@
             display: flex;
         }
         .product-wrapper {
-            width: 1181px; /* Adjust based on your specific layout */
+            width: 90%; /* Adjust based on your specific layout */
             overflow-x: auto;
             padding: 10px 0;
+            margin: auto;
         }
         .product-grid {
             display: flex;
@@ -189,7 +190,8 @@
 
         .mainsec {
             font-family: 'CustFont', sans-serif;
-            padding-left: 15px;
+            padding-top: 50px;
+            text-align: center;
         }
 
         .left-section {
