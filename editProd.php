@@ -42,40 +42,46 @@
         ?>
         <table>
             <tr>
-                <td>prod_id</td>
+                <td>Product ID</td>
                 <td>:</td>
                 <td><?php echo $prod_id; ?></td>
             </tr>
             <tr>
-                <td>prod_name</td>
+                <td>Product Name</td>
                 <td>:</td>
                 <td><input type="text" name="p_name" value="<?php echo $prod_name; ?>"></td>
             </tr>
             <tr>
-                <td>prod_desc</td>
+                <td>Product Description</td>
                 <td>:</td>
                 <td><input type="text" name="p_desc" value="<?php echo $prod_desc; ?>"></td>
             </tr>
             <tr>
-                <td>prod_price</td>
+                <td>Product Price</td>
                 <td>:</td>
                 <td><input type="text" name="p_price" value="<?php echo $prod_price; ?>"></td>
             </tr>
             <tr>
-                <td>prod_type</td>
+                <td>Product Type</td>
                 <td>:</td>
-                <td><input type="text" name="p_type" value="<?php echo $prod_type; ?>"></td>
+                <td>
+                <select id="p_type" name="p_type" value="<?php echo $prod_type; ?>" required >
+                        
+                        <option value="polo t-shirt">Polo T-shirts</option>
+                        <option value="sweatshirt"> Sweatshirt</option>
+                        <option value="t-shirt"> T-shirts</option>
+                        </select> </td>
             </tr>
             <tr>
-                <td>picture</td>
+                <td>Image Link</td>
                 <td>:</td>
                 <td><input type="text" name="pic" value="<?php echo $picture; ?>"></td>
             </tr>
         </table>
-        <input type="submit" name = "update" value = "Update">
-        <input type="submit" name = "delete" value = "Delete">
+        <input type="submit" name = "update" class="updel" value = "Update">
+        <input type="submit" name = "delete" class="updel" value = "Delete">
     </form>
-    <a href='admin.php'>cancel</a><br>
+    <a href='admin.php'>Cancel</a><br>
 </body>
 <?php
     mysqli_close($dbconn);

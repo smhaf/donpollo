@@ -19,41 +19,48 @@
             <form action="addProdProcess.php" method="post">
                 <table>
                     <tr>
-                        <td>prod_id</td>
+                        <td>Product ID</td>
                         <td>:</td>
                         <td><input type="text" name="p_id" required></td>
                     </tr>
                     <tr>
-                        <td>prod_name</td>
+                        <td>Product Name</td>
                         <td>:</td>
                         <td><input type="text" name="p_name" required></td>
                     </tr>
                     <tr>
-                        <td>prod_desc</td>
+                        <td>Product Description</td>
                         <td>:</td>
                         <td><input type="text" name="p_desc" required></td>
                     </tr>
                     <tr>
-                        <td>prod_price</td>
+                        <td>Product Price</td>
                         <td>:</td>
                         <td><input type="text" name="p_price" required></td>
                     </tr>
                     <tr>
-                        <td>prod_type</td>
+                        <td>Product Type</td>
                         <td>:</td>
-                        <td><input type="text" name="p_type" required></td>
+                        <td>
+                        <select id="p_type" name="p_type" required>
+                        <option value="" disabled selected> Choose an option</option>
+                        <option value="polo t-shirt">Polo T-shirts</option>
+                        <option value="sweatshirt"> Sweatshirt</option>
+                        <option value="t-shirt"> T-shirts</option>
+                        </select> 
+                        </td>
                     </tr>
                     <tr>
-                        <td>picture</td>
+                        <td>Image Link</td>
                         <td>:</td>
                         <td><input type="text" name="pic" required></td>
                     </tr>
                 </table>
-                <div class="btn"><button type="submit" value="submit">submit</button></div>
+                <div class="btn"><button type="submit" value="submit">Submit</button></div>
             </form>
         </div>
         <div class="a">
-            <a href='admin.php'>cancel</a><br>
+            <a href='admin.php'>Cancel</a><br>
         </div>
     </div>
 </body>
