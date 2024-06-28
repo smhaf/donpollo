@@ -32,7 +32,6 @@ function confirmation() {
 </head>
 <body>
     <h1>Welcome to the Admin Page!</h1>
-    <a class="btnLogOut" onClick = 'confirmation()'>Logout</a>
     <h2>Clothes details</h2> <!-- ++++++++++++++++++++++++ FOOD DETAILS ++++++++++++++++++++++++++++ -->
     <div class="food-container">
         <form action="prod.php" method="post">
@@ -281,6 +280,9 @@ function confirmation() {
             </form>
         </div>
     </div>
+    </div>
+    <div class="logbtn">
+        <button class="btnLogOut" onClick='confirmation()'>Log Out</button>
     </div>
 </body>
 <?php
