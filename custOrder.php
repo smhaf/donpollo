@@ -28,7 +28,8 @@
             <tr>
                 <th>Food Picture</th>
                 <th>Order ID</th>
-                <th>Food ID</th>
+                <th>Product ID</th>
+                <th>Size</th>
                 <th>Quantity</th>
                 <th>Order Status</th>
                 <th>Option</th>
@@ -44,6 +45,7 @@
                         echo "<td align='center'><img src='" . $row['picture'] . "' alt='Food Picture' /></td>";
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
                         if($row['ord_status'] == 'Pending'||$row['ord_status'] == 'pending'){
