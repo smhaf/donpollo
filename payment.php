@@ -8,7 +8,7 @@
             ;window.location.href='login.php';</script>");
     }
     $ord_id = htmlspecialchars($_GET['o_id']);
-    $sql = "select o.prod_id, p.prod_name, o.qty, p.prod_price, (o.qty * p.prod_price) as total 
+    $sql = "select o.prod_id, p.prod_name, o.qty, o.size, p.prod_price, (o.qty * p.prod_price) as total 
             from prod_order o join product p on o.prod_id = p.prod_id
             where o.ord_id = '$ord_id';";
     $query = mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
@@ -18,6 +18,7 @@
     $qty = $row['qty'];
     $food_price = $row['prod_price'];
     $total = $row['total'];
+    $size = $row['size'];
 
 ?>
 <html lang="en">
@@ -46,7 +47,7 @@
                 -->
                 
                 <label for="bankName">Choose Your Bank:</label>
-                <select id="bank_id" name="bank_id" required>
+                <select id="bank_id" name="bank_id" required> 
                     <option value="BI">Bank Islam</option>
                     <option value="BR">Bank Rakyat</option>
                     <option value="BSN">Bank Simpanan Nasional</option>
@@ -57,6 +58,8 @@
                 <label><?php echo $food_name ?></label>
                 <label><?php echo 'Quantity: '.$qty ?></label>
                 <label><?php echo 'Total: RM'.$total ?></label>
+                <label><?php echo 'Size:'.$size ?></label>
+                <input type="hidden" id="" name="size" value="<?php echo $size; ?>">
 
                 <button type="submit" class="submitPayment" name="ord_id" value = <?php echo $ord_id; ?>>Pay Now</button>
             </form>

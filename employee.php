@@ -55,7 +55,8 @@ function confirmation() {
                 <tr>
                     <td>Order ID</td>
                     <td>Customer ID</td>
-                    <td>Food ID</td>
+                    <td>Product ID</td>
+                    <td>Size</td>
                     <td>Quantity</td>
                     <td>Employee ID</td>
                     <td>Status</td>
@@ -71,6 +72,7 @@ function confirmation() {
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
@@ -87,7 +89,8 @@ function confirmation() {
                 <tr>
                     <td>Order ID</td>
                     <td>Customer ID</td>
-                    <td>Food ID</td>
+                    <td>Product ID</td>
+                    <td>Size</td>
                     <td>Quantity</td>
                     <td>Employee ID</td>
                     <td>Status</td>
@@ -102,6 +105,7 @@ function confirmation() {
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
@@ -118,7 +122,8 @@ function confirmation() {
                 <tr>
                     <td>Order ID</td>
                     <td>Customer ID</td>
-                    <td>Food ID</td>
+                    <td>Product ID</td>
+                    <td>Size</td>
                     <td>Quantity</td>
                     <td>Employee ID</td>
                     <td>Status</td>
@@ -133,6 +138,7 @@ function confirmation() {
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";

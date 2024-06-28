@@ -6,6 +6,7 @@
         $ord_id = htmlspecialchars($_POST['ord_id']);
         $bank_id = htmlspecialchars($_POST['bank_id']);
         $rep_date = (string)date("y-m-d");
+        $size = htmlspecialchars($_POST['size']);
         $pay_id = "";
 
         do{/*generate pay_id */
@@ -23,8 +24,8 @@
             $pay_id = ($row == 0 ? $id : "");
         }while($row != 0);
 
-        $sql = "insert into receipt (pay_id, ord_id, bank_id, rep_date) values
-                ('$pay_id', '$ord_id','$bank_id', '$rep_date')";
+        $sql = "insert into receipt (pay_id, ord_id, bank_id, rep_date,size) values
+                ('$pay_id', '$ord_id','$bank_id', '$rep_date','$size');";
         mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
         die("<script>alert('Payment has been made!!')
             ;window.location.href='mainPage.php';</script>");

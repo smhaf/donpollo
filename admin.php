@@ -192,12 +192,13 @@ function confirmation() {
                     <th>Customer Name</th>
                     <th>Product ID</th>
                     <th>Product Name</th>
+                    <th>Size</th>
                     <th>Quantity</th>
                     <th>Order Status</th>
                     <th>Employee ID</th>
                 </tr>
                 <?php
-                    $sql = "select o.ord_id, c.cust_id, c.cust_name, p.prod_id, p.prod_name, o.qty, o.ord_status, coalesce(o.emp_id, 'Unassigned') as emp_id from prod_order o
+                    $sql = "select o.ord_id, c.cust_id, c.cust_name, p.prod_id, p.prod_name, o.qty, o.ord_status, o.size, coalesce(o.emp_id, 'Unassigned') as emp_id from prod_order o
                                 join product p on o.prod_id = p.prod_id
                                 join customer c on o.cust_id = c.cust_id;";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
@@ -210,6 +211,7 @@ function confirmation() {
                         echo "<td>". $row['cust_name'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['prod_name'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
                         echo "<td>". $row['emp_id'] ."</td>";
@@ -231,6 +233,7 @@ function confirmation() {
                     <th>Order ID</th>
                     <th>Customer ID</th>
                     <th>Product ID</th>
+                    <th>Size</th>
                     <th>Quantity</th>
                     <th>Order Status</th>
                     <th>Employee ID</th>
@@ -245,6 +248,7 @@ function confirmation() {
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['cust_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
+                        echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
                         echo "<td>Unassigned</td>";

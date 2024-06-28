@@ -52,7 +52,12 @@
                     <label for="quantity">Product Quantity:</label>
                     <input type="number" id="quantity" name="quantity" min="1" required><br>
                     <label for="size">Size:</label>
-                    <input  id="size" name="size" required>
+                    <select id="size" name="size" required>
+                        <option value="" disabled selected> Choose an option</option>
+                        <option value="S"> S</option>
+                        <option value="M"> M</option>
+                        <option value="L"> L</option>
+                    </select>
                 </form>
                 <div class="center"><a href="mainPage.php"><button class="buyMe" type="submit" form="prod1" name="foodID" value="<?php echo $food_id; ?>">Buy Now</button></a></div>
             </div>
