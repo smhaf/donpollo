@@ -17,7 +17,8 @@ function confirmation() {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baka Bakery</title>
+        <title>Don Pollo Online Clothing Store</title>
+        <link rel="icon" href="pics/donpollologo.jpg">
         <!--<link rel="stylesheet" href="irdp2CSS.css">-->
         <style>
             <?php include('irdp2CSS.css'); ?> 
