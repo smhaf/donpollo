@@ -80,7 +80,7 @@
             width: 120px;
           }
 
-        .foodName{
+        .prodName{
             font-size: larger;
         }
 
@@ -104,7 +104,7 @@
             margin-bottom: 0%;
         }
 
-        .foodDesc{
+        .prodDesc{
             margin: 0;
         }
 

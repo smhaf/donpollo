@@ -15,7 +15,7 @@
     <link rel="icon" href="pics/donpollologo.jpg">
     <title>Edit Product</title>
     <style>
-        <?php include('editFoodCSS.css') ?>
+        <?php include('editProdCSS.css') ?>
     </style>
 </head>
 <body>

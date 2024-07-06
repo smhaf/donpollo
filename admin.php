@@ -33,17 +33,18 @@ function confirmation() {
 </head>
 <body>
     <h1>Welcome to the Admin Page!</h1>
-    <h2>Clothes details</h2> <!-- ++++++++++++++++++++++++ FOOD DETAILS ++++++++++++++++++++++++++++ -->
-    <div class="food-container">
+    <h2>Clothes details</h2> <!-- ++++++++++++++++++++++++ Product DETAILS ++++++++++++++++++++++++++++ -->
+    <div class="prod-container">
         <form action="prod.php" method="post">
-            <table border="1" class="food">
+            <table border="1" class="prod">
                 <tr>
                     <th>Product ID</th>
                     <th>Product name</th>
                     <th>Product description</th>
                     <th>Product price</th>
                     <th>Product type</th>
-                    <th>Picture link</th>
+                    <!--<th>Picture link</th>-->
+                    <th>Picture</th>
                 </tr>
                 <?php
                     $sql = "select * from product;";
@@ -57,7 +58,8 @@ function confirmation() {
                         echo "<td>". $row['prod_desc'] ."</td>";
                         echo "<td>". $row['prod_price'] ."</td>";
                         echo "<td>". $row['prod_type'] ."</td>";
-                        echo "<td>". $row['picture'] ."</td>";
+                        /*echo "<td>". $row['picture'] ."</td>";*/
+                        echo "<td align='center'><img src='" . $row['picture'] . "' alt='Picture' /></td>";
                         echo "<tr>";
                     }
                 ?>
@@ -69,7 +71,7 @@ function confirmation() {
                 } 
             ?>
             <div class="btn">
-                <button type="submit" value="foods">Update Product</button>
+                <button type="submit" value="prods">Update Product</button>
             </div>
         </form>
     </div>

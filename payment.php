@@ -13,10 +13,10 @@
             where o.ord_id = '$ord_id';";
     $query = mysqli_query($dbconn, $sql) or die("Error :". mysqli_error($dbconn));
     $row = mysqli_fetch_assoc($query);
-    $food_id = $row['prod_id'];
-    $food_name = $row['prod_name'];
+    $prod_id = $row['prod_id'];
+    $prod_name = $row['prod_name'];
     $qty = $row['qty'];
-    $food_price = $row['prod_price'];
+    $prod_price = $row['prod_price'];
     $total = $row['total'];
     $size = $row['size'];
 
@@ -56,7 +56,7 @@
                     <option value="RHB">RHB Bank</option>
                 </select>
 
-                <label><?php echo $food_name ?></label>
+                <label><?php echo $prod_name ?></label>
                 <label><?php echo 'Quantity: '.$qty ?></label>
                 <label><?php echo 'Total: RM'.$total ?></label>
                 <label><?php echo 'Size:'.$size ?></label>

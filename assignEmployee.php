@@ -24,11 +24,25 @@
             die("<script>alert('Employee doesn't not exist')
             ;window.location.href='admin.php';</script>");
         }
-        /*assign the employee to order*/
-        $sql = "update prod_order set emp_id = '$emp_id' where ord_id = '$ord_id';";
+        /*
+        $sql = "Select * from prod_order where ord_id = '$ord_id'";
         $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
-        die("<script>alert('Employee is succesfully assigned')
-            ;window.location.href='admin.php';</script>");
+        while($row = mysqli_fetch_assoc($query))
+        {
+            if($row['ord_status'] == 'Cancelled'||$row['ord_status'] == 'cancelled')
+            {
+                die("<script>alert('You can't assign cancelled order')
+                    ;window.location.href='admin.php';</script>");
+            }
+            else{*/
+                /*assign the employee to order*/
+                $sql = "update prod_order set emp_id = '$emp_id' where ord_id = '$ord_id';";
+                $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
+                die("<script>alert('Employee is succesfully assigned')
+                    ;window.location.href='admin.php';</script>");
+
+            /*}
+        }*/
     }else{
         header("Location: admin.php");
     }

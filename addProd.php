@@ -9,9 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pics/donpollologo.jpg">
     <title>Add New Product to Menu</title>
-    <!-- <link rel="stylesheet" href="addFoodCSS.css"> -->
     <style>
-        <?php include('addFoodCSS.css'); ?>
+        <?php include('addProdCSS.css'); ?>
     </style>
 </head>
 <body>

@@ -27,7 +27,7 @@
     <div class="wrapper">
         <table border="1">
             <tr>
-                <th>Food Picture</th>
+                <th>Product Picture</th>
                 <th>Order ID</th>
                 <th>Product ID</th>
                 <th>Size</th>
@@ -43,7 +43,7 @@
                     $r = mysqli_num_rows($query);
                     while($row = mysqli_fetch_array($query)){
                         echo "<tr>";
-                        echo "<td align='center'><img src='" . $row['picture'] . "' alt='Food Picture' /></td>";
+                        echo "<td align='center'><img src='" . $row['picture'] . "' alt='Picture' /></td>";
                         echo "<td>". $row['ord_id'] ."</td>";
                         echo "<td>". $row['prod_id'] ."</td>";
                         echo "<td>". $row['size'] ."</td>";

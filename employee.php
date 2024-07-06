@@ -151,7 +151,6 @@ function confirmation() {
             </table>
         </div>
     </div>
-    <!---<h2>Food details</h2> ++++++++++++++++++++++++ FOOD DETAILS ++++++++++++++++++++++++++++ 
     
 	<div>
         <h2>Update order status</h2>

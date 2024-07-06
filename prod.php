@@ -15,7 +15,7 @@
     <link rel="icon" href="pics/donpollologo.jpg">
     <title>Document</title>
     <style>
-        <?php include('foodCSS.css'); ?>
+        <?php include('prodCSS.css'); ?>
     </style>
 </head>
 <body>

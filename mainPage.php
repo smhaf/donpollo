@@ -25,7 +25,7 @@ function confirmation() {
         </style>
     </head>
     <body>
-    <header>
+    <header id="myHeader">
         <div class="container">
             <div class="left-section">
                 <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
@@ -58,17 +58,17 @@ function confirmation() {
 
                             if (mysqli_num_rows($result) > 0) {
                                 while($row = mysqli_fetch_assoc($result)) {
-                                    $food_name = $row['prod_name'];
-                                    $food_desc = $row['prod_desc'];
-                                    $food_price = $row['prod_price'];
-                                    $food_picture = $row['picture'];
-                                    $food_id = $row['prod_id'];
+                                    $prod_name = $row['prod_name'];
+                                    $prod_desc = $row['prod_desc'];
+                                    $prod_price = $row['prod_price'];
+                                    $prod_picture = $row['picture'];
+                                    $prod_id = $row['prod_id'];
 
-                                    echo "<a href='product1.php?p_id=$food_id' class='product'>
+                                    echo "<a href='product1.php?p_id=$prod_id' class='product'>
                                              <div class='product-content'>
-                                                <img src='$food_picture' alt='$food_name'>
-                                                <h3 >$food_name</h3>
-                                                <p>RM $food_price</p>
+                                                <img src='$prod_picture' alt='$prod_name'>
+                                                <h3 >$prod_name</h3>
+                                                <p>RM $prod_price</p>
                                              </div>
                                           </a>";
                                     }
@@ -111,16 +111,16 @@ function confirmation() {
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['prod_name'];
-                                $food_desc = $row['prod_desc'];
-                                $food_price = $row['prod_price'];
-                                $food_picture = $row['picture'];
+                                $prod_name = $row['prod_name'];
+                                $prod_desc = $row['prod_desc'];
+                                $prod_price = $row['prod_price'];
+                                $prod_picture = $row['picture'];
 
                                 echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'producti'>
                                 <div class='product'>
-                                    <img src='$food_picture' alt='$food_name'>
-                                    <h3>$food_name</h3>
-                                    <p>RM $food_price</p>
+                                    <img src='$prod_picture' alt='$prod_name'>
+                                    <h3>$prod_name</h3>
+                                    <p>RM $prod_price</p>
                                 </div>
 				                </a>";
 				                
@@ -139,16 +139,16 @@ function confirmation() {
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['prod_name'];
-                                $food_desc = $row['prod_desc'];
-                                $food_price = $row['prod_price'];
-                                $food_picture = $row['picture'];
+                                $prod_name = $row['prod_name'];
+                                $prod_desc = $row['prod_desc'];
+                                $prod_price = $row['prod_price'];
+                                $prod_picture = $row['picture'];
 
                                 echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'producti'>
                                 <div class='product'>
-                                    <img src='$food_picture' alt='$food_name'>
-                                    <h3>$food_name</h3>
-                                    <p>RM $food_price</p>
+                                    <img src='$prod_picture' alt='$prod_name'>
+                                    <h3>$prod_name</h3>
+                                    <p>RM $prod_price</p>
                                 </div>
 				                </a>";
                             }
@@ -166,16 +166,16 @@ function confirmation() {
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $food_name = $row['prod_name'];
-                                $food_desc = $row['prod_desc'];
-                                $food_price = $row['prod_price'];
-                                $food_picture = $row['picture'];
+                                $prod_name = $row['prod_name'];
+                                $prod_desc = $row['prod_desc'];
+                                $prod_price = $row['prod_price'];
+                                $prod_picture = $row['picture'];
 
                                 echo "<a href=product1.php?p_id=".$row['prod_id']." class= 'productk'>
                                 <div class='product'>
-                                    <img src='$food_picture' alt='$food_name'>
-                                    <h3>$food_name</h3>
-                                    <p>RM $food_price</p>
+                                    <img src='$prod_picture' alt='$prod_name'>
+                                    <h3>$prod_name</h3>
+                                    <p>RM $prod_price</p>
                                 </div>
 				                </a>";
                             }
@@ -201,6 +201,20 @@ function confirmation() {
                 });
             });
         });
+        </script>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+            }
         </script>
     </body>
     <?php mysqli_close($dbconn); ?>

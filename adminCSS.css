@@ -12,7 +12,7 @@
     display: flex;
 }
 
-.food, .order{
+.prod, .order{
     border-collapse: collapse;
     border: 1;
     margin: 0 10px 10px;
@@ -33,6 +33,11 @@ h1{
 
 }
 
+img{
+    max-width: 120px;
+    max-height: auto;
+}
+
 h2{
     margin-top: 30px;
     text-align: center;
@@ -51,7 +56,7 @@ h2{
     margin-bottom: 20px;
 }
 
-.food-container input{
+.prod-container input{
     border: none;
     outline: none;
     text-align: center;
@@ -92,7 +97,7 @@ table{
     text-align: center;
 }
 
-.food-container,.emp-container table, .calc-container table, .ViewOrder table, .assign-container table{
+.prod-container,.emp-container table, .calc-container table, .ViewOrder table, .assign-container table{
     margin-left: auto;
     margin-right: auto;
 }
@@ -103,7 +108,7 @@ table{
     margin-right: auto;
 }
 
-.food-container,.details-container, .emp-container, .calc-container, .ViewOrder, .assign-container{
+.prod-container,.details-container, .emp-container, .calc-container, .ViewOrder, .assign-container{
     background: white;
     box-shadow: 10px 10px 7px rgb(36, 36, 36);
     border-radius: 15px;
