@@ -16,7 +16,7 @@
 
             if(!filter_var($emp_email, FILTER_VALIDATE_EMAIL)){
                 die("<script>alert('Invalid email')
-                    ;window.location.href='admin.php';</script>");
+                    ;window.location.href='viewEmployee.php';</script>");
             }
 
             $sql = "select * from employee where emp_email = '$emp_email'";
@@ -36,20 +36,20 @@
                     where emp_id = '$emp_id';";
             $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
             die("<script>alert('Update successfully')
-            ;window.location.href='admin.php';</script>");
+            ;window.location.href='viewEmployee.php';</script>");
         }
-        elseif(isset($_POST['delete'])){
-            $emp_id = $_SESSION['e_id'];
-
-            $sql = "delete from employee where emp_id = '$emp_id'";
-            $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
-            die("<script>alert('Delete successfully')
-            ;window.location.href='admin.php';</script>");
-        }
+        
         else{
             die("<script>alert('No changes has been made')
-            ;window.location.href='admin.php';</script>");
+            ;window.location.href='viewEmployee.php';</script>");
         }
+    }
+    elseif(isset($_GET['e_id'])){
+        $emp_id = $_REQUEST['e_id'];
+        $sql = "delete from employee where emp_id = '$emp_id'";
+        $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
+        die("<script>alert('Delete successfully')
+        ;window.location.href='viewEmployee.php';</script>");
     }
     else{
         header("location: admin.php");

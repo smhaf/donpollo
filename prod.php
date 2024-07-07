@@ -33,6 +33,7 @@
                 <th>Product price</th>
                 <th>Product type</th>
                 <th>Picture link</th>
+                <th>Picture </th>
                 <th>Option</th>
             </tr>
             <?php
@@ -48,7 +49,9 @@
                     echo "<td>". $row['prod_price'] ."</td>";
                     echo "<td>". $row['prod_type'] ."</td>";
                     echo "<td>". $row['picture'] ."</td>";
-                    echo "<td><a href='editProd.php?p_id=".$row["prod_id"]."' style='color: blue; text-decoration: underline;'>Edit</a></td>";
+                    echo "<td align='center'><img src='" . $row['picture'] . "' alt='Picture' /></td>";
+                    echo "<td><a href='editProd.php?p_id=".$row["prod_id"]."' style='color: blue; text-decoration: underline;'>Edit</a>
+                    <a href='upDelProd.php?p_id=".$row["prod_id"]."' style='color: blue; text-decoration: underline;' name = 'delete'>Delete</a></td>";
                     echo "<tr>";
                 }
             ?>

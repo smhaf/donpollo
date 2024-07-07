@@ -65,11 +65,8 @@
             </tr>
         </table>
         <input type="submit" name = "update" value = "Update">
-        <input type="submit" name = "delete" value = "Delete">
+        <input type="submit" href='admin.php' value = "Cancel">
     </form>
-    <div class= cancelbut>
-    <a href='admin.php'>cancel</a><br>
-    </div>
 </body>
 <?php
     mysqli_close($dbconn);

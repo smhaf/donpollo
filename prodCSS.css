@@ -83,3 +83,7 @@ body{
     padding: 10px;
     border-radius: 15px;
 }
+img{
+    max-width: 120px;
+    max-height: auto;
+}

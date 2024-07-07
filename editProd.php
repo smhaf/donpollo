@@ -80,9 +80,8 @@
             </tr>
         </table>
         <input type="submit" name = "update" class="updel" value = "Update">
-        <input type="submit" name = "delete" class="updel" value = "Delete">
+        <input type="submit" value = "Cancel" href='admin.php'>
     </form>
-    <a href='admin.php'>Cancel</a><br>
 </body>
 <?php
     mysqli_close($dbconn);

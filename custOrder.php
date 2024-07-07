@@ -53,7 +53,7 @@
                             echo "<td><a href='cancelOrder.php?ord_id=".$row['ord_id']."'>Cancel</a></td>";
                         }
                         else{
-                            echo "<td>-</td>";
+                            echo "<td>---------</td>";
                         }
                         echo "<tr>";
                     }

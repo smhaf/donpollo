@@ -36,7 +36,8 @@
                 echo "<td>". $row['emp_name'] ."</td>";
                 echo "<td>". $row['emp_email'] ."</td>";
                 echo "<td>". $row['emp_phone'] ."</td>";
-                echo "<td><a href='editEmployee.php?e_id=".$row["emp_id"]."'>Edit</a></td>";
+                echo "<td><a href='editEmployee.php?e_id=".$row["emp_id"]."'>Edit</a> ||
+                <a href='upDelEmployee.php?e_id=".$row["emp_id"]."' name = 'delete'>Delete</a></td>";
                 echo "<tr>";
             }
         ?>

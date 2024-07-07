@@ -151,36 +151,7 @@ function confirmation() {
             </table>
         </div>
     </div>
-    
-	<div>
-        <h2>Update order status</h2>
-        <div>
-            <form action="updateOrderProcess.php" method="post">
-            <table class="order">
-                <tr>
-                    <td>
-                        Order ID
-                    </td>
-                    <td>:</td>
-                    <td>
-                        <input type="text" name="ord_id" id="o_id" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Order Status
-                    </td>
-                    <td>:</td>
-                    <td>
-                        <input type="text" name="ord_status" id="o_stat" required>
-                    </td>
-                </tr>
-            </table>
-            <button type="submit" value="orders">Update</button>
-            </form>
-        </div>
-    </div>
-	-->
+
     <div class="logbtn">
         <button class="btnLogOut" onClick='confirmation()'>Log Out</button>
     </div>

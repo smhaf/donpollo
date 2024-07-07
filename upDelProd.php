@@ -16,20 +16,20 @@
                     where prod_id = '$prod_id'";
             $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
             die("<script>alert('Update successfully')
-            ;window.location.href='admin.php';</script>");
+            ;window.location.href='prod.php';</script>");
         }
-        elseif(isset($_POST['delete'])){
-            $prod_id = $_SESSION['p_id'];
-
-            $sql = "delete from product where prod_id = '$prod_id'";
-            $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
-            die("<script>alert('Delete successfully')
-            ;window.location.href='admin.php';</script>");
-        }
+        
         else{
             die("<script>alert('No changes has been made')
-            ;window.location.href='admin.php';</script>");
+            ;window.location.href='prod.php';</script>");
         }
+    }
+    elseif(isset($_GET['p_id'])){
+        $prod_id = $_REQUEST['p_id'];
+        $sql = "delete from product where prod_id = '$prod_id'";
+        $query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
+        die("<script>alert('Delete successfully')
+        ;window.location.href='prod.php';</script>");
     }
     else{
         header("location: admin.php");
