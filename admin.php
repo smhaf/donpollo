@@ -87,6 +87,7 @@ function confirmation() {
                 <button type="submit" value="prods">Update Product</button>
             </div>
         </form>
+            <a href='addProd.php'><button>Add New Product</button></a>
     </div>
     <!-- ################################################# UPDATE ORDER STATUS #######################################################
     <div>
@@ -149,9 +150,10 @@ function confirmation() {
                     echo "No record";
                 } 
             ?>
+            
             <div class="btn">
-                <button type="submit" value="employee">Update Employee</button>
-            </div>
+                <button type="submit" value="employee">Update Employee</button><br>
+            </div>            
         </form>
     </div>
     <div class="calc-container">

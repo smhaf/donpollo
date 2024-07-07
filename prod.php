@@ -57,9 +57,6 @@
             ?>
         </table>
     </div>
-    <div class="addfud">
-        <a href='addProd.php'><button>Add New Product</button></a><br>
-    </div>
     <div class="back">
         <a href='admin.php'><button>Cancel</button></a><br>
     </div>  
