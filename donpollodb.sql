@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2024 at 05:32 PM
+-- Generation Time: Jul 06, 2024 at 06:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bakabakerydb`
+-- Database: `donpollodb`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `bank` (
 
 INSERT INTO `bank` (`bank_id`, `bank_name`) VALUES
 ('BI', 'Bank Islam'),
-('BR', 'Bank Rakyat'),
+('BR', 'Bank Rakyat'),
 ('BSN', 'Bank Simpanan Nasional '),
 ('MYB', 'MayBank'),
 ('RHB', 'RHB Bank');
@@ -63,7 +63,9 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `cust_name`, `cust_password`, `cust_address`, `cust_phone`, `cust_email`) VALUES
+('C53982', 'zulkifli', '$2y$10$HlJWDchnCsQ60iSc.O4y1uNXUkMUAyzdUG1iKkYgwtsqnvdkAb9Ha', 'raub', '01111', 'zz@gmail.com'),
 ('C54712', 'Ahmad Faris', '$2y$10$IQ7Y3bxHu1INqRh6IkMIk.2Mlm8F2PQCSxaZrfLue0LOEKZd2M5H2', 'kota warisan, raub', '0134137802', 'ahmadfarismk@gmail.com'),
+('C67138', 'Aiman Ikram', '$2y$10$GMVBhzqK.BwpA2H2qnKQdePOq0flgT5kKAYgIzw89y3uO9Da.ji3q', 'Temerloh', '01292983423', 'aiman@gmail.com'),
 ('C94016', 'Syakir Hafiy', '$2y$10$1hEC8fMIKg5B2m4q78os8OIspQ0PuRuz0oXehPtMIAuh5w1qKbRGy', 'Raub', '0123456789', 'syakir@gmail.com');
 
 -- --------------------------------------------------------
@@ -114,15 +116,15 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`prod_id`, `prod_name`, `prod_desc`, `prod_price`, `picture`, `prod_type`) VALUES
-('1-1', 'Cookies and Cream', 'A variety of ice cream that contain pre-crumbled cookies from Nabisco Oreo brand', 12.00, 'https://i.ibb.co/58PrVb0/cookies-and-cream.jpg', 'polo t-shirt'),
-('1-2', 'Mint Choc Chip', 'An ice cream flavor composed of mint ice cream with small chocolate chips', 13.00, 'https://i.ibb.co/LCb6TBs/mint-choc-chip.jpg', 'polo t-shirt'),
-('1-3', 'Caramel Cream', 'Use of caramelized sugar that gives the ice cream a rich, smooth, and creamy texture with a sweet and slightly nutty flavor', 14.00, 'https://i.ibb.co/pP9sHn0/caramel-cream.jpg', 'polo t-shirt'),
-('2-1', 'Tiramisu', 'An Italian dessert that has layers of coffee-soaked ladyfingers and a cream made from mascarpone, eggs and sugar', 15.00, 'https://i.ibb.co/wMGrL8n/tiramisu-cake.jpg', 'sweatshirt'),
-('2-2', 'Red Velvet', 'A cocoa-based cake in which using vinegar, baking soda, and buttermilk give the cake a smooth, tightly crumbed texture with a subtle, tangy flavor.', 16.00, 'https://i.ibb.co/Qpgxy64/red-velvet.jpg', 'sweatshirt'),
-('2-3', 'Burn Cheesecake', 'A dessert consisting of a thick, creamy filling of cheese, eggs, and sugar over a thinner crust with sweet toppings', 17.00, 'https://i.ibb.co/Rz3wRYd/Bask-cheesecake.jpg', 'sweatshirt'),
-('3-1', 'Choc Chip', 'A sweet baked treat that is recognized by its butter flavor and the inclusion of chocolate chips', 10.00, 'https://i.ibb.co/kxYTJn9/choc-chip-cookies.jpg', 'pants'),
-('3-2', 'Dark Choc Chip', 'A sweet baked treat that is recognized by its butter flavor and the inclusion of dark chocolate chips', 11.00, 'https://i.ibb.co/jLpGPNH/dark-choc-chip.jpg', 'pants'),
-('3-3', 'Vanilla Choc Chip', 'A sweet baked treat that is recognized by its butter flavor and the inclusion of vanilla chocolate chips', 12.00, 'https://i.ibb.co/1RqVVrH/vanilla-choc-chip.jpg', 'pants');
+('1-1', 'Open Short Sleeve Polo Shirt', '- Smooth \'AIRism\' fabric with the look of cotton.\n- With DRY and Cool Touch comfort features.\n- Crisp fabric creates a sleek silhouette.\n- Elegant dress with a shirt-style collar. ', 49.00, 'https://i.ibb.co/tsMbwV2/goods-467039-sub14.jpg', 'polo t-shirt'),
+('1-2', 'Pique Polo Shirt', '- With quick-drying DRY technology, suitable for leisure, sports, and everyday wear.\n- Collar looks great buttoned-up or undone.\n- Ribbed cuffs for a classic look.\n- Versatile, basic design and cut for easy styling', 49.00, 'https://i.ibb.co/4RsVd3M/goods-472592-sub14.jpg', 'polo t-shirt'),
+('1-3', 'Striped Short Sleeve Polo Shirt', '- Smooth, light pique fabric made from a blend of pilling-resistant cotton and polyester.\n- Keeps its shape even after repeated washing.\n- With DRY technology. ', 49.00, 'https://i.ibb.co/CHqkstR/goods-465195-sub14.jpg', 'polo t-shirt'),
+('2-1', 'Sweat Pullover Long Sleeve Hoodie', '- Fine fabric with a smooth, premium feel.\n- Contoured hood design.\n- Sleek and functional side pockets', 65.00, 'https://i.ibb.co/dJSm6m5/goods-444967-sub14.jpg', 'sweatshirt'),
+('2-2', 'Sweat Long Sleeve Cardigan', '- Smooth touch on the inside and out.\n- Special looped lining prevents pilling.\n- Sleek and functional side pockets.\n- Versatile, roomy silhouette. ', 65.00, 'https://i.ibb.co/fddTC3g/goods-465497-sub14.jpg', 'sweatshirt'),
+('2-3', 'Striped Ribbed Crew Neck Long Sleeve Sweater', '- Knit with alternating cotton-rayon and polyester threads for a crisp, stretchy fabric that retains its shape.\n- The cut showcases the texture of the fabric.', 65.00, 'https://i.ibb.co/R7KWj6W/goods-468753-sub14.jpg', 'sweatshirt'),
+('3-1', 'Jean-Michel Basquiat UT', '“UT Archive” is a project that revives carefully selected T-shirts which have been sold in the past. From the UT collection that has been on sale for about 20 years, popular patterns by Andy Warhol, Basquiat, and Keith Haring will be re-released.', 39.00, 'https://i.ibb.co/gMbC6tH/goods-03-469261.jpg', 't-shirt'),
+('3-2', 'UT ARCHIVE Keith Haring UT', '“UT Archive” is a project that revives carefully selected T-shirts which have been sold in the past. From the UT collection that has been on sale for about 20 years, popular patterns by Andy Warhol, Basquiat, and Keith Haring will be re-released.', 39.00, 'https://i.ibb.co/x24VVfT/goods-30-469260.jpg', 't-shirt'),
+('3-3', 'Tears of the Kingdom UT', '&quot;THE LEGEND OF ZELDA TEARS OF THE KINGDOM&quot; is a game for Nintendo Switch released by Nintendo in 2023. The magnificent worldview, unique characters, and memorable scenes and lines from the game have been expressed and designed into T-shirts in a', 39.00, 'https://i.ibb.co/dQp1jtG/goods-472681-sub14.jpg', 'polo t-shirt');
 
 -- --------------------------------------------------------
 
@@ -136,8 +138,20 @@ CREATE TABLE `prod_order` (
   `prod_id` varchar(6) DEFAULT NULL,
   `qty` int(10) DEFAULT NULL,
   `ord_status` varchar(60) DEFAULT NULL,
-  `emp_id` varchar(6) DEFAULT NULL
+  `emp_id` varchar(6) DEFAULT NULL,
+  `size` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `prod_order`
+--
+
+INSERT INTO `prod_order` (`ord_id`, `cust_id`, `prod_id`, `qty`, `ord_status`, `emp_id`, `size`) VALUES
+('O11868', 'C54712', '2-1', 1, 'Complete', 'E00001', 'L'),
+('O31349', 'C67138', '2-1', 1, 'Complete', 'E00001', 'L'),
+('O74466', 'C53982', '2-1', 1, 'Cancelled', NULL, 'S'),
+('O96852', 'C54712', '3-2', 2, 'Cancelled', 'E00001', 'M'),
+('O97885', 'C53982', '2-1', 5, 'Complete', 'E00001', 'L');
 
 -- --------------------------------------------------------
 
@@ -149,8 +163,18 @@ CREATE TABLE `receipt` (
   `pay_id` varchar(6) NOT NULL,
   `ord_id` varchar(6) DEFAULT NULL,
   `bank_id` varchar(6) DEFAULT NULL,
-  `rep_date` date DEFAULT NULL
+  `rep_date` date DEFAULT NULL,
+  `size` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `receipt`
+--
+
+INSERT INTO `receipt` (`pay_id`, `ord_id`, `bank_id`, `rep_date`, `size`) VALUES
+('P37873', 'O97885', 'BI', '2024-06-28', 'L'),
+('P79158', 'O31349', 'MYB', '2024-07-06', 'L'),
+('P87562', 'O11868', 'MYB', '2024-06-28', 'L');
 
 --
 -- Indexes for dumped tables
@@ -222,3 +246,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
