@@ -21,7 +21,7 @@ function confirmation() {
         <link rel="icon" href="pics/donpollologo.jpg">
         <!--<link rel="stylesheet" href="irdp2CSS.css">-->
         <style>
-            <?php include('irdp2CSS.css'); ?> 
+            <?php include('mainPageCSS.css'); ?> 
         </style>
     </head>
     <body>

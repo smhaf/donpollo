@@ -1,12 +1,8 @@
-h1{
-    text-align: center;
-    margin-bottom: 0;
-    background-color: #808080;
-    margin-bottom: 15px;
-    padding: 25px;
-    background-image: url(pics/backgroundhome.jpg);
-
-}
+h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #000;
+    }
 header {
     position: relative;
     z-index: 10;
@@ -87,7 +83,4 @@ nav a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-}
-.sticky + .product-wrapper {
-    padding-top: 170px;
 }

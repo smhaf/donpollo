@@ -125,3 +125,6 @@
             background: #E5E4E2;
             
         }
+        .sticky + body {
+            padding-top: 170px;
+        }

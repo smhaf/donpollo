@@ -66,8 +66,8 @@
             </form>
         </div>
     </main>
-    <div >
-        <a href='mainPage.php'><button class="logbtn">Cancel</button></a>
+    <div class='logbtn'>
+        <a href='mainPage.php'><button>Cancel</button></a>
     </div>
     <footer>
         <div class="container">
