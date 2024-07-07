@@ -65,7 +65,10 @@
                 <button type="submit" class="submitPayment" name="ord_id" value = <?php echo $ord_id; ?>>Pay Now</button>
             </form>
         </div>
-    </main>`    
+    </main>
+    <div >
+        <a href='mainPage.php'><button class="logbtn">Cancel</button></a>
+    </div>
     <footer>
         <div class="container">
             <p>&copy; 2024 Donpollo . All rights reserved.</p>

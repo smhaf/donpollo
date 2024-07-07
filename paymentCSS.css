@@ -67,3 +67,9 @@ header h1 {
 .submitPayment:hover {
     background: #77a5f7;
 }
+.logbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* Optional: This centers the button vertically within the viewport */
+}

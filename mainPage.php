@@ -25,7 +25,7 @@ function confirmation() {
         </style>
     </head>
     <body>
-    <header id="myHeader">
+    <header id="myHeader" >
         <div class="container">
             <div class="left-section">
                 <img src="pics/donpollologo.jpg" alt="Logo" class="logo">

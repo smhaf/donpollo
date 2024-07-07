@@ -32,6 +32,19 @@ function confirmation() {
     
 </head>
 <body>
+    <header id="myHeader">
+        <div class="c">
+            <div class="lefty-section">
+                <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
+                <h1 class=custfont id=tagline > DonPollo Enterprise.</h1>
+            </div>
+            <nav>
+                <?php 
+                        echo "<a onClick = 'confirmation()'>Logout</a>";
+                ?> 
+            </nav>
+        </div>
+    </header>
     <h1>Welcome to the Admin Page!</h1>
     <h2>Clothes details</h2> <!-- ++++++++++++++++++++++++ Product DETAILS ++++++++++++++++++++++++++++ -->
     <div class="prod-container">
@@ -284,9 +297,20 @@ function confirmation() {
         </div>
     </div>
     </div>
-    <div class="logbtn">
-        <button class="btnLogOut" onClick='confirmation()'>Log Out</button>
-    </div>
+    <script>
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+            }
+        </script>
 </body>
 <?php
     mysqli_close($dbconn);

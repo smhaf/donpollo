@@ -1,0 +1,93 @@
+h1{
+    text-align: center;
+    margin-bottom: 0;
+    background-color: #808080;
+    margin-bottom: 15px;
+    padding: 25px;
+    background-image: url(pics/backgroundhome.jpg);
+
+}
+header {
+    position: relative;
+    z-index: 10;
+    background-image: url('pics/backgroundhome.jpg');
+    background-size: cover;
+    background-color: #e9bcf1;
+    background-position: center;
+    color: rgb(2, 2, 2);
+    padding: 22px 0;
+    text-align: center;
+}
+header nav a {
+    color: rgb(2, 2, 2);
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+.c {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+.logo {
+    height: 75px; 
+    margin-right: 10px;
+    margin-left: 25px;
+}
+.customfont {
+    font-family: 'CustomFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'CustFont';
+    src: url('fonts/3d.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custfont {
+    font-family: 'CustFont', sans-serif;
+    padding-left: 10px;
+}
+
+@font-face {
+    font-family: 'mainsec';
+    src: url('fonts/3d2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainsec {
+    font-family: 'CustFont', sans-serif;
+    padding-top: 50px;
+    text-align: center;
+}
+.lefty-section {
+    display: flex;
+    align-items: center;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .product-wrapper {
+    padding-top: 170px;
+}

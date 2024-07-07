@@ -2,6 +2,7 @@
 <?php
     session_start();
     include("dbconn.php");
+    include ('header.php');
 
     $f_id = $_REQUEST['p_id'];
 
@@ -28,12 +29,12 @@
     </style>
 </head>
 <body>
-    <header>
+    <h2>
         <div class="head-container">
             <!--sini echo prod name-->
-            <div class="title"><h1><?php echo $prod_name; ?></h1></div>
+            <div class="title"><h3><?php echo $prod_name; ?></h3></div>
         </div>
-    </header>
+    </h2>
     <main class="container">
         <div class="product-detail">
             <img src=<?php echo $picture; ?> alt="Product 1">   
@@ -60,7 +61,9 @@
                         <option value="L"> L</option>
                     </select>
                 </form>
-                <div class="center"><a href="mainPage.php"><button class="buyMe" type="submit" form="prod1" name="prodID" value="<?php echo $prod_id; ?>">Buy Now</button></a></div>
+                <div class="center"><a href="mainPage.php">
+                    <button class="buyMe" type="submit" form="prod1" name="prodID" value="<?php echo $prod_id; ?>">Buy Now</button></a>
+                </div>
             </div>
         </div>
     </main>
@@ -69,6 +72,20 @@
             <p>&copy; 2024 Donpollo. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
 </body>
 <?php
     mysqli_close($dbconn);
