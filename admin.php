@@ -36,7 +36,7 @@ function confirmation() {
         <div class="c">
             <div class="lefty-section">
                 <img src="pics/donpollologo.jpg" alt="Logo" class="logo">
-                <h1 class=custfont id=tagline > DonPollo Enterprise.</h1>
+                <h1 class =custfont id=tagline > DonPollo Enterprise.</h1>
             </div>
             <nav>
                 <?php 
@@ -45,7 +45,7 @@ function confirmation() {
             </nav>
         </div>
     </header>
-    <h1>Welcome to the Admin Page!</h1>
+    <h3>Welcome to the Admin Page!</h3>
     <h2>Clothes details</h2> <!-- ++++++++++++++++++++++++ Product DETAILS ++++++++++++++++++++++++++++ -->
     <div class="prod-container">
         <form action="prod.php" method="post">
