@@ -50,7 +50,7 @@
                         echo "<td>". $row['size'] ."</td>";
                         echo "<td>". $row['qty'] ."</td>";
                         echo "<td>". $row['ord_status'] ."</td>";
-                        if($row['ord_status'] == 'Pending'||$row['ord_status'] == 'pending'){
+                        if($row['ord_status'] == 'Ready to pick up'||$row['ord_status'] == 'Pending'){
                             echo "<td><a href='cancelOrder.php?ord_id=".$row['ord_id']."'>Cancel</a></td>";
                         }
                         else{

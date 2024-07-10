@@ -14,7 +14,7 @@
         $prod_id = htmlspecialchars($_POST['prodID']);
         $qty = htmlspecialchars($_POST['quantity']);
         $size = htmlspecialchars($_POST['size']);
-        $ord_status = "Pending";
+        $ord_status = "Ready to pick up";
 
         do{/*generate ord_id */
             $id = (string)rand(1,99999);

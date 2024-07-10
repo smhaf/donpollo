@@ -52,7 +52,7 @@
                     <td>:</td>
                     <td>
                         <!--<input type="text" name="ord_status"  id="o_stat" required>-->
-						<label><input type="radio" name="ord_status" id="o_stat" value="Pending" checked    >Pending</label>
+						<label><input type="radio" name="ord_status" id="o_stat" value="Ready to pick up" checked    >Ready to pick up</label>
 						<label><input type="radio" name="ord_status" id="o_stat" value="Complete">Complete</label>
 						<label><input type="radio" name="ord_status" id="o_stat" value="Cancelled">Cancelled</label>
 

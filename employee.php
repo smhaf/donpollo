@@ -42,7 +42,7 @@ function confirmation() {
         <h2>Order Status</h2>
         <div class="status">
             <ul>
-                <li>Pending</li>
+                <li>Ready to pick up</li>
                 <li>Complete</li>
                 <li>Cancelled</li>
             </ul>
@@ -51,7 +51,7 @@ function confirmation() {
     <br>
     <div class="container">
         <div class="pending-stat">
-            <h3>Pending</h3>
+            <h3>Ready to pick up</h3>
             <table border="1">
                 <tr>
                     <td>Order ID</td>
@@ -64,7 +64,7 @@ function confirmation() {
                     <!--Untuk update, refer sini: https://docs.google.com/presentation/d/1HNhDIzOMOvb3IPY9SVcXha6MLLyjXydp/edit?usp=sharing&ouid=115591133717528043506&rtpof=true&sd=true-->
                     <th>Update</th>
                     <?php
-                    $sql = "select * from prod_order where ord_status = 'Pending' and emp_id = '$employee' ;";
+                    $sql = "select * from prod_order where ord_status = 'Ready to pick up' and emp_id = '$employee' ;";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
 

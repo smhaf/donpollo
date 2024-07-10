@@ -66,9 +66,6 @@
             </form>
         </div>
     </main>
-    <div class='logbtn'>
-        <a href='mainPage.php'><button>Cancel</button></a>
-    </div>
     <footer>
         <div class="container">
             <p>&copy; 2024 Donpollo . All rights reserved.</p>

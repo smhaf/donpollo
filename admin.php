@@ -256,7 +256,7 @@ function confirmation() {
                     <th>Employee ID</th>
                 </tr>
                 <?php
-                    $sql = "select * from prod_order where emp_id is null;";
+                    $sql = "select * from prod_order where emp_id is null and ord_status != 'Cancelled';";
                     $query = mysqli_query($dbconn, $sql) or die ("Error :". mysqli_error($dbconn));
                     $r = mysqli_num_rows($query);
 

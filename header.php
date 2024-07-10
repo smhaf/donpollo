@@ -20,7 +20,6 @@ function confirmation() {
             </div>
             <nav>
                 <?php 
-                    echo "<a href='mainPage.php'>Back</a>";
                     echo "<a onClick = 'confirmation()'>Logout</a>";
                 ?> 
             </nav>
